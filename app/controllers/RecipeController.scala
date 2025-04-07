@@ -22,7 +22,7 @@ class RecipeController @Inject()(cc: ControllerComponents, repo: RecipeRepositor
 
   def create = Action(parse.json) { request =>
     request.body.validate[Recipe].fold(
-      _ => BadRequest(Json.obj(
+      _ => Ok(Json.obj(
         "message" -> "Recipe creation failed!",
         "required" -> "title, making_time, serves, ingredients, cost"
       )),
