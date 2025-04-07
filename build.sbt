@@ -16,7 +16,7 @@ libraryDependencies ++= Seq(
   "org.scalatestplus.play" %% "scalatestplus-play" % "7.0.1" % Test
 )
 
-javaOptions += "-Dplay.filters.hosts.allowed.0=.*"
+// javaOptions += "-Dplay.filters.hosts.allowed.0=.*"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.example.controllers._"
